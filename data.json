@@ -1,0 +1,49 @@
+{
+    "data":{
+        "dates":{
+            "15-07-2022":{
+                "Temp": 24,
+                "Turbidity": 8,
+                "Water level": "55%",
+                "ph": 4.9
+            },
+            "16-07-2022":{
+                "Temp": 24,
+                "Turbidity": 8,
+                "Water level": "55%",
+                "ph": 4.9
+            },
+            "17-07-2022":{
+                "Temp": 24,
+                "Turbidity": 8,
+                "Water level": "55%",
+                "ph": 4.9
+            },
+            "18-07-2022":{
+                "Temp": 24,
+                "Turbidity": 8,
+                "Water level": "55%",
+                "ph": 4.9
+            },
+            "19-07-2022":{
+                "Temp": 24,
+                "Turbidity": 8,
+                "Water level": "55%",
+                "ph": 4.9
+            },
+            "20-07-2022":{
+                "Temp": 24,
+                "Turbidity": 8,
+                "Water level": "55%",
+                "ph": 4.9
+            },
+            "21-07-2022":{
+                "Temp": 24,
+                "Turbidity": 8,
+                "Water level": "55%",
+                "ph": 4.9
+            }
+        }
+    }
+
+  }

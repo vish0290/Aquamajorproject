@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+  <title>Dashboard - Droplets</title>
+  <link rel="stylesheet" href="{{url_for('static', filename = "css/bootstrap.min.css")}}">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" />
+  <link rel="stylesheet" href="{{url_for('static', filename =
+    "fonts/fontawesome-all.min.css")}}">
+  <link rel="stylesheet" href="{{url_for('static', filename = "fonts/font-awesome.min.css")}}">
+  <link rel="stylesheet" href="{{url_for('static', filename =
+    "fonts/ionicons.min.css")}}">
+  <link rel="stylesheet" href="{{url_for('static', filename =
+    "fonts/fontawesome5-overrides.min.css")}}">
+  <link rel="stylesheet" href="{{url_for('static', filename = "css/Contact-Form-Clean.css")}}">
+  <link rel="stylesheet" href="{{url_for('static', filename =
+    "css/Login-Form-Clean.css")}}">
+</head>
+
+<body id="page-top" >
+  <div id="wrapper">
+    <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-dark p-1" style="background: #1B2430">
+      <div class="container-fluid d-flex flex-column p-0">
+        <a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
+          <div class="sidebar-brand-icon rotate-n-15">
+            <i class="fas fa-fish"></i>
+          </div>
+          <div class="sidebar-brand-text mx-3"><span>Aqua Dash</span></div>
+        </a>
+        <ul class="navbar-nav text-light" id="accordionSidebar">
+          <!-- <li class="nav-item">Name: </li>
+          <li class="nav-item">Address: </li>
+          <li class="nav-item">Bill: &#8377;</li>
+          <li class="nav-item">Status: </li> -->
+        </ul>
+        <div class="text-center d-none d-md-inline"></div>
+      </div>
+    </nav>
+    <div class="d-flex flex-column" id="content-wrapper"  style="background: #EEEEEE">
+      <div id="content">
+        <div class="container-fluid">
+          <div class="d-sm-flex justify-content-between align-items-center mb-4">
+            <h1 class="text-dark mt-3 mb-0">Dashboard</h1>
+          </div>
+        </div>
+        <div class="row ms-1">
+          <div class="col">
+            <div class="card border border-2 rounded shadow text-white" style="width: 500px; background: #51557E">
+              <div class="card-body">
+                <h4 class="card-title">PH meter</h4>
+              </div>
+              <img class="card-img-bottom" src="{{url_for('static',filename='img/ph.png')}}" alt="Card image" style="width: 100%" />
+            </div>
+          </div>
+          <div class="col">
+            <div class="card border border-2 rounded shadow  text-white" style="width: 500px; background: #51557E">
+              <div class="card-body">
+                <h4 class="card-title">Water Temparture</h4>
+              </div>
+              <img class="card-img-bottom" src="{{url_for('static',filename='img/temp.png')}}" alt="Card image" style="width: 100%" />
+            </div>
+          </div>
+        </div>
+        <div class="row ms-1 mt-5">
+          <div class="col">
+            <div class="card border border-2 rounded shadow text-white" style="width: 500px; background: #51557E">
+              <div class="card-body">
+                <h4 class="card-title">Water Level</h4>
+              </div>
+              <img class="card-img-bottom" src="{{url_for('static',filename='img/water_lvl.png')}}" alt="Card image" style="width:100%">
+            </div>
+          </div>
+          <div class="col">
+            <div class="card border border-2 rounded shadow  text-white" style="width: 500px; background: #51557E">
+              <div class="card-body">
+                <h4 class="card-title">Turbidity</h4>
+              </div>
+              <img class="card-img-bottom" src="{{url_for('static',filename='img/tur.png')}}" alt="Card image" style="width: 100%" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
+  <script src="{{url_for('static', filename='js/theme.js')}}"></script>
+</body>
+
+</html>
