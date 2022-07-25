@@ -1,9 +1,9 @@
-import plotly.express as px
-import plotly.graph_objects as go
-import pyrebase
-import json
-import pandas as pd
-
+# import plotly.express as px
+# import plotly.graph_objects as go
+# import pyrebase
+# import json
+# import pandas as pd
+import requests
 
 config={  
 "apiKey": "AIzaSyCn7bN52E2v3ELIEWx1Fy3OeZE6ertQiuk",
@@ -52,34 +52,37 @@ config={
 
 
 # fig.show()
-firebase=pyrebase.initialize_app(config)
-db = firebase.database()
-raw = json.loads(json.dumps(db.child('data').get().val()))
-dates_data = raw['dates']
+# firebase=pyrebase.initialize_app(config)
+# db = firebase.database()
+# raw = json.loads(json.dumps(db.child('data').get().val()))
+# dates_data = raw['dates']
 
-dates_keys = dates_data.keys()
-temp = []
-for i in dates_keys:
-  d = {"date":i, "temp":dates_data[i]['Temp'], "turbidity":dates_data[i]['Turbidity'], 'water_lvl':dates_data[i]['Water level'] }
-  temp.append(d)
-df = pd.DataFrame(temp)
-print(df)
-# Line Chart of water temperature 
-fig = px.line(df, x="date", y="temp", title='Water Temperature')
-fig.write_image('static/img/temp.png')
+# dates_keys = dates_data.keys()
+# temp = []
+# for i in dates_keys:
+#   d = {"date":i, "temp":dates_data[i]['Temp'], "turbidity":dates_data[i]['Turbidity'], 'water_lvl':dates_data[i]['Water level'] }
+#   temp.append(d)
+# df = pd.DataFrame(temp)
+# print(df)
+# # Line Chart of water temperature 
+# fig = px.line(df, x="date", y="temp", title='Water Temperature')
+# fig.write_image('static/img/temp.png')
 
-# water level bar graph
-fig = px.bar(df, x='date',y='water_lvl')
-fig.write_image('static/img/water_lvl.png')
+# # water level bar graph
+# fig = px.bar(df, x='date',y='water_lvl')
+# fig.write_image('static/img/water_lvl.png')
 
-#line chart for turbidity
-fig = px.line(df, x='date',y='turbidity')
-fig.write_image('static/img/tur.png')
+# #line chart for turbidity
+# fig = px.line(df, x='date',y='turbidity')
+# fig.write_image('static/img/tur.png')
 
-#PH gauge 
-fig = go.Figure(go.Indicator(
-mode = "gauge+number",
-value = raw['ph'],
-domain = {'x': [0, 1], 'y': [0, 1]},
-title = {'text': "Ph Value"}))
-fig.write_image('static/img/ph.png')
+# #PH gauge 
+# fig = go.Figure(go.Indicator(
+# mode = "gauge+number",
+# value = raw['ph'],
+# domain = {'x': [0, 1], 'y': [0, 1]},
+# title = {'text': "Ph Value"}))
+# fig.write_image('static/img/ph.png')
+url = 'https://aquamajorproject.herokuapp.com/update/1:2:3:4'
+resp = requests.get(url)
+print(resp)
