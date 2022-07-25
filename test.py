@@ -5,16 +5,16 @@
 # import pandas as pd
 import requests
 
-config={  
-"apiKey": "AIzaSyCn7bN52E2v3ELIEWx1Fy3OeZE6ertQiuk",
-  "authDomain": "esp32-fb-61701.firebaseapp.com",
-  "databaseURL": "https://esp32-fb-61701-default-rtdb.firebaseio.com",
-  "projectId": "esp32-fb-61701",
-  "storageBucket": "esp32-fb-61701.appspot.com",
-  "messagingSenderId": "355330542241",
-  "appId": "1:355330542241:web:6ab97bc2f70ed7f826bee0",
-  "measurementId": "G-JFR16DHHN0"
-}
+# config={  
+# "apiKey": "AIzaSyCn7bN52E2v3ELIEWx1Fy3OeZE6ertQiuk",
+#   "authDomain": "esp32-fb-61701.firebaseapp.com",
+#   "databaseURL": "https://esp32-fb-61701-default-rtdb.firebaseio.com",
+#   "projectId": "esp32-fb-61701",
+#   "storageBucket": "esp32-fb-61701.appspot.com",
+#   "messagingSenderId": "355330542241",
+#   "appId": "1:355330542241:web:6ab97bc2f70ed7f826bee0",
+#   "measurementId": "G-JFR16DHHN0"
+# }
 
 # firebase=pyrebase.initialize_app(config)
 # db = firebase.database()
@@ -83,6 +83,6 @@ config={
 # domain = {'x': [0, 1], 'y': [0, 1]},
 # title = {'text': "Ph Value"}))
 # fig.write_image('static/img/ph.png')
-url = 'https://aquamajorproject.herokuapp.com/update/1:2:3:4'
+url = 'https://aquamajorproject.herokuapp.com//update/1:2:3:4'
 resp = requests.get(url)
 print(resp)
