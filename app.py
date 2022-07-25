@@ -67,10 +67,11 @@ def passdata(val):
   current_date = str(a.day)+'-'+'{:02d}'.format(a.month)+'-'+str(a.year)
   val = val.split(':')
   dates_data=raw['dates']
-  dates_data[current_date]['Temp'] = int(float(itab[0]))
-  dates_data[current_date]['Turbidity'] = int(float(itab[1]))
-  dates_data[current_date]['Water level'] = int(float(itab[2]))
-  data = {'ph':float((itab[3])),'date':dates_data}
+  dates_data.update({current_date:{'Temp':int(float(itab[0])),'Turbidity':int(float(itab[1])),'Water level':int(float(itab[2]))}})
+  # dates_data[current_date]['Temp'] = int(float(itab[0]))
+  # dates_data[current_date]['Turbidity'] = int(float(itab[1]))
+  # dates_data[current_date]['Water level'] = int(float(itab[2]))
+  data = {'ph':float((itab[3])),'dates':dates_data}
   db.child('data').update(data)
   print(val)
   return str(val)
